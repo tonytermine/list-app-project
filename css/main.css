@@ -13,14 +13,14 @@ Notes:   main.css for list-project
 	Orange Theme
 	-------------------------------------- */
 	.footer-container,
-	.main aside {
-			border-top: 20px solid #e44d26;
+	.print {
+		border-top: 20px solid #e44d26;
 	}
 
 	.header-container,
 	.footer-container,
-	.main aside {
-			background: #f16529;
+	.print {
+		background: #f16529;
 	}
 
 /* --------------------------------------
@@ -64,13 +64,6 @@ Notes:   main.css for list-project
 	Body Elements
 	-------------------------------------- */
 
-	.header-container,
-	form {
-			-webkit-box-shadow: 0 5px 10px #aaa;
-				 -moz-box-shadow: 0 5px 10px #aaa;
-							box-shadow: 0 5px 10px #aaa;
-	}
-
 	.main-container {
 		height: 450px;
 		min-height: 100%;
@@ -91,6 +84,12 @@ Notes:   main.css for list-project
 	.main-input {
 		width: 70%;
 		margin: 0 auto;
+		font-family: 'Comfortaa', Arial, sans-serif;
+		font-size: 1.1em;
+	}
+
+	.main-input:focus {
+		outline-color: #f16529;
 	}
 
 	h4 {
@@ -112,10 +111,17 @@ Notes:   main.css for list-project
 
 	.check {
 		color: green;
+		display: none;
 	}
 
 	.completed {
 		text-decoration: line-through;
+	}
+
+	.delete {
+		color: #ff0000;
+		float: right;
+		display: none;
 	}
 
 	form li {
@@ -128,9 +134,27 @@ Notes:   main.css for list-project
 		vertical-align: middle;
 	}
 
-	.main aside {
-			color: white;
-			padding: 0px 5% 10px;
+	.button-wrap {
+		text-align: center;
+	}
+
+	.print {
+		color: white;
+		font-family: 'Comfortaa', Arial, sans-serif;
+		font-weight: bold;
+		border-radius: 5px;
+		padding: 15px 5% 15px;
+		border: none;
+		margin: 4% auto;
+		width: 30%;
+	}
+
+	.print:active {
+		margin-top: 4.2%;
+	}
+
+	.print:focus {
+		outline: none;
 	}
 
 /* --------------------------------------
@@ -157,47 +181,55 @@ Notes:   main.css for list-project
 	-------------------------------------- */
 
 	body {
-			background: url("../img/paper.png");
-			-webkit-font-smoothing: antialiased;
-			text-rendering: optimizelegibility;
+		background: url("../img/paper.png");
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizelegibility;
+	}
+
+	.header-container,
+	.print,
+	form {
+		-webkit-box-shadow: 0 5px 10px #aaa;
+			 -moz-box-shadow: 0 5px 10px #aaa;
+						box-shadow: 0 5px 10px #aaa;
 	}
 
 	.wrapper {
-			width: 90%;
-			margin: 0 5%;
+		width: 90%;
+		margin: 0 5%;
 	}
 
 	hr {
-			display: block;
-			height: 1px;
-			border: 0;
-			border-top: 1px solid #ccc;
-			margin: 1em 0;
-			padding: 0;
+		display: block;
+		height: 1px;
+		border: 0;
+		border-top: 1px solid #ccc;
+		margin: 1em 0;
+		padding: 0;
 	}
 
 	audio,
 	canvas,
 	img,
 	video {
-			vertical-align: middle;
+		vertical-align: middle;
 	}
 
 	fieldset {
-			border: 0;
-			margin: 0;
-			padding: 0;
+		border: 0;
+		margin: 0;
+		padding: 0;
 	}
 
 	textarea {
-			resize: vertical;
+		resize: vertical;
 	}
 
 	.browsehappy {
-			margin: 0.2em 0;
-			background: #ccc;
-			color: #000;
-			padding: 0.2em 0;
+		margin: 0.2em 0;
+		background: #ccc;
+		color: #000;
+		padding: 0.2em 0;
 	}
 
 	/* ==========================================================================
@@ -207,28 +239,36 @@ Notes:   main.css for list-project
 	@media only screen and (min-width: 1px) and (max-width: 480px) {
 
 		.logo {
-			font-size: 0.8em;
+		font-size: 0.8em;
 		}
 
 		.title {
-			font-size: 2.8em;
+		font-size: 2.8em;
 		}
 
 		form h4 {
-			font-size: 0.8em;
+		font-size: 0.8em;
 		}
 
 		ul {
-			width: 100%;
-			padding: 0;
+		width: 100%;
+		padding: 0;
 		}
 
 		ul li {
-			font-size: 1.2em;
+		font-size: 1.2em;
+		}
+
+		.print {
+		width: 100%;
 		}
 
 		footer h3 {
-			font-size: 1em;
+		font-size: 1em;
+		}
+
+		.clear-all {
+			margin-top: 10px;
 		}
 	}
 
@@ -245,8 +285,8 @@ Notes:   main.css for list-project
 		 =============== */
 
 			.wrapper {
-					width: 1026px; /* 1140px - 10% for margins */
-					margin: 0 auto;
+				width: 1026px; /* 1140px - 10% for margins */
+				margin: 0 auto;
 			}
 	}
 
@@ -255,59 +295,131 @@ Notes:   main.css for list-project
 		 ========================================================================== */
 
 	.ir {
-			background-color: transparent;
-			border: 0;
-			overflow: hidden;
-			*text-indent: -9999px;
+		background-color: transparent;
+		border: 0;
+		overflow: hidden;
+		*text-indent: -9999px;
 	}
 
 	.ir:before {
-			content: "";
-			display: block;
-			width: 0;
-			height: 150%;
+		content: "";
+		display: block;
+		width: 0;
+		height: 150%;
 	}
 
 	.hidden {
-			display: none !important;
-			visibility: hidden;
+		display: none !important;
+		visibility: hidden;
 	}
 
 	.visuallyhidden {
-			border: 0;
-			clip: rect(0 0 0 0);
-			height: 1px;
-			margin: -1px;
-			overflow: hidden;
-			padding: 0;
-			position: absolute;
-			width: 1px;
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
 	}
 
 	.visuallyhidden.focusable:active,
 	.visuallyhidden.focusable:focus {
-			clip: auto;
-			height: auto;
-			margin: 0;
-			overflow: visible;
-			position: static;
-			width: auto;
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
 	}
 
 	.invisible {
-			visibility: hidden;
+		visibility: hidden;
 	}
 
 	.clearfix:before,
 	.clearfix:after {
-			content: " ";
-			display: table;
+		content: " ";
+		display: table;
 	}
 
 	.clearfix:after {
-			clear: both;
+		clear: both;
 	}
 
 	.clearfix {
-			*zoom: 1;
+		*zoom: 1;
 	}
+
+	/* ==========================================================================
+	   Print styles.
+	   Inlined to avoid required HTTP connection: h5bp.com/r
+	   ========================================================================== */
+
+	@media print {
+    * {
+      background: transparent !important;
+      color: #000 !important; /* Black prints faster: h5bp.com/s */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+
+    a[href]:after {
+      content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+      content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+      content: "";
+    }
+
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+
+    thead {
+      display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+
+    img {
+      max-width: 100% !important;
+    }
+
+    @page {
+      margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+}
