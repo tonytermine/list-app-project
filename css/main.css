@@ -158,6 +158,8 @@ Notes:   main.css for list-project
 
 	body {
 			background: url("../img/paper.png");
+			-webkit-font-smoothing: antialiased;
+			text-rendering: optimizelegibility;
 	}
 
 	.wrapper {
