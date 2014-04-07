@@ -85,7 +85,7 @@ Notes:   main.css for list-project
 		width: 70%;
 		margin: 0 auto;
 		font-family: 'Comfortaa', Arial, sans-serif;
-		font-size: 1.1em;
+		font-weight: bold;
 	}
 
 	.main-input:focus {
