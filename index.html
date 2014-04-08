@@ -24,9 +24,9 @@
 		<div class="main-container">
 			<div class="main wrapper clearfix">
 				<form>
-					<input type="text" class="main-input">
+					<input type"text" class="main-input">
 					<button type="submit" class="add">+</button>
-					<button type="submit" class="clear-all">Clear All</button>
+					<button type="submit" class="clear">Clear</button>
 					<br>
 					<h4>Drag Items to Sort List</h4>
 					<ul>
@@ -35,10 +35,8 @@
 						<li class="items"><span class="fa-stack"><i class="checkbox fa fa-square-o fa-stack-1x"></i><i class="check fa fa-check fa-stack-1x"></i></span>Fabric Softener<i class="delete fa fa-times"></i></li>
 					</ul>
 				</form><!-- end form -->
-				<div class="button-wrap">
-					<button class="print" type="submit">Print List</button>
-				</div>
 			</div> <!-- .main-->
+			<a href="javascript:window.print()" class="print">Print List</a>
 		</div> <!-- .main-container -->
 
 		<div class="footer-container">
@@ -49,6 +47,7 @@
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+		<script src="js/vendor/jquery-ui-custom.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
