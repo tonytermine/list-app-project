@@ -19,7 +19,7 @@ Notes:   main.css for list-project
 	.header-container,
 	.footer-container,
 	.add,
-	.clear,
+	.reset,
 	.print {
 		background: #f16529;
 	}
@@ -101,18 +101,26 @@ Notes:   main.css for list-project
 		border: none;
 	}
 
+	.add:active {
+		margin-top: 2px;
+	}
+
 	.add:focus {
 		outline: none;
 	}
 
-	.clear {
+	.reset {
 		color: white;
 		font-family: 'Comfortaa', Arial, sans-serif;
 		font-weight: bold;
 		border: none;
 	}
 
-	.clear:focus {
+	.reset:active {
+		margin-top: 2px;
+	}
+
+	.reset:focus {
 		outline: none;
 	}
 
@@ -297,7 +305,11 @@ Notes:   main.css for list-project
 			font-size: 1em;
 		}
 
-		.clear {
+		.reset {
+			margin-top: 10px;
+		}
+
+		.reset:active {
 			margin-top: 10px;
 		}
 	}
@@ -388,17 +400,17 @@ Notes:   main.css for list-project
 	   ========================================================================== */
 
 	@media print {
-    * {
-      background: transparent !important;
-      color: #000 !important; /* Black prints faster: h5bp.com/s */
-      box-shadow: none !important;
-      text-shadow: none !important;
-      border: none;
-    }
+		* {
+		  background: transparent !important;
+		  color: #000 !important; /* Black prints faster: h5bp.com/s */
+		  box-shadow: none !important;
+		  text-shadow: none !important;
+		  border: none;
+		}
 
-    .footer-container,
-    .main-input,
-    button {
-      display: none;
-    }
-}
+		.footer-container,
+		.main-input,
+		button {
+		  display: none;
+		}
+	}

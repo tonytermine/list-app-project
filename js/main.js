@@ -1,9 +1,15 @@
 $(document).ready(function() {
-	// append a new list item to the list by taking the value of the user input when they click on the + button.
+	// append a new list item to the list by taking the value of the user input when they click on the + button. Have an alert pop up if user does not enter anything in the input field.
 	$(".add").click(function(e) {
-		var toAdd = $("input[class=main-input]").val();
-		e.preventDefault();
+		var toAdd = $("input").val();
+		if (toAdd.length === 0) {
+		alert("Please, enter text to add to your list!");
+		} else {
 		$("ul").append("<li class='items'><span class='fa-stack'><i class='checkbox fa fa-square-o fa-stack-1x'></i><i class='check fa fa-check fa-stack-1x'></i></span>"+toAdd+"<i class='delete fa fa-times'></i></li>");
+		}
+		e.preventDefault();
+		// clear input bar after entering an item
+		$("form")[0].reset();
 	});
 	//show delete button on mouse hover
 		$("ul").on("mouseenter", "li", function() {
@@ -25,7 +31,7 @@ $(document).ready(function() {
 	//sort list items by dragging with mouse.
 		$("ul").sortable({ axis: "y" });
 	// clear entire list by clicking clear button
-		$(".clear").click(function(e) {
+		$(".reset").click(function(e) {
 			$("ul").empty();
 			e.preventDefault();
 		});
