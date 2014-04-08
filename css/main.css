@@ -39,6 +39,7 @@ Notes:   main.css for list-project
 	.logo {
 		padding-top: 20px;
 		text-align: center;
+		font-size: 0.8em;
 		margin: 0;
 	}
 
@@ -326,12 +327,25 @@ Notes:   main.css for list-project
 	  color: #000 !important; /* Black prints faster: h5bp.com/s */
 	  box-shadow: none !important;
 	  text-shadow: none !important;
-	  border: none;
+	  border-top: none !important;
+	  border-bottom: none !important;
+	  padding: 0;
+	  margin: 0;
+	}
+
+	.logo {
+		font-size: 0.7em;
+	}
+
+	.title {
+		font-size: 2em;
 	}
 
 	.footer-container,
 	.main-input,
-	button {
+	.print,
+	button,
+	h4 {
 	  display: none;
 	}
 }
