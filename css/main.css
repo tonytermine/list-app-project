@@ -268,6 +268,7 @@ Notes:   main.css for list-project
 
 	form h4 {
 		font-size: 0.8em;
+		display: none;
 	}
 
 	ul {
