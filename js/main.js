@@ -2,8 +2,9 @@ $(document).ready(function() {
 	// append a new list item to the list by taking the value of the user input when they click on the + button. Have an alert pop up if user does not enter anything in the input field.
 	$(".add").click(function(e) {
 		var toAdd = $("input").val();
-		if (toAdd.length === 0) {
+		if (toAdd == 0) {
 		alert("Please, enter text to add to your list!");
+		return false;
 		} else {
 		$("ul").append("<li class='items'><span class='fa-stack'><i class='checkbox fa fa-square-o fa-stack-1x'></i><i class='check fa fa-check fa-stack-1x'></i></span>"+toAdd+"<i class='delete fa fa-times'></i></li>");
 		}
