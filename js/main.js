@@ -6,17 +6,17 @@ $(".add-button").click(function(e) {
 	alert("Please, enter text to add to your list!");
 	return false;
 	} else {
-	$(".list").append("<li class='items'><span class='fa-stack'><i class='checkbox fa fa-square-o fa-stack-1x'></i><i class='check fa fa-check fa-stack-1x'></i></span>"+toAdd+"<i class='delete fa fa-times'></i></li>");
+	$(".list").append("<li class='list-items'><span class='fa-stack'><i class='checkbox fa fa-square-o fa-stack-1x'></i><i class='check fa fa-check fa-stack-1x'></i></span>"+toAdd+"<i class='delete fa fa-times'></i></li>");
 	}
 	e.preventDefault();
 	// clear input bar after entering an item
 	$("form")[0].reset();
 });
 //show delete button on mouse hover
-	$(".list").on("mouseenter", "li", function() {
+	$(".list").on("mouseenter", ".list-items", function() {
 		$(this).find(".delete").toggle();
 	});
-	$(".list").on("mouseleave", "li", function() {
+	$(".list").on("mouseleave", ".list-items", function() {
 		$(this).find(".delete").toggle();
 	});
 //delete list items by clicking the x
@@ -25,7 +25,7 @@ $(".add-button").click(function(e) {
 		$(this).parent().remove();
 	});
 //check the box and cross off list items
-	$(".list").on("click", "li", function() {
+	$(".list").on("click", ".list-items", function() {
 		$(this).toggleClass("completed");
 		$(this).find(".check").toggle();
 	});
@@ -37,4 +37,4 @@ $(".add-button").click(function(e) {
 		e.preventDefault();
 	});
 // hide example list items
-	$(".items").hide();
+	$(".list-items").hide();

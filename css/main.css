@@ -84,7 +84,12 @@ Notes:   main.css for list-project
 		background: url("../img/paper.png");
 	}
 
-	form li {
+	.list {
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	.list-items {
 		list-style-type: none;
 		font-family: 'Architects Daughter', Arial, sans-serif;
 		font-size: 1.4em;
@@ -135,14 +140,9 @@ Notes:   main.css for list-project
 		outline: none;
 	}
 
-	h4 {
+	.instructions {
 		font-family: 'Comfortaa', Arial, sans-serif;
 		font-weight: lighter;
-	}
-
-	.list {
-		margin: 0 auto;
-		width: 90%;
 	}
 
 	.checkbox {
@@ -199,7 +199,7 @@ Notes:   main.css for list-project
 			min-height: 50px;
 	}
 
-	h3 {
+	.footer-text {
 		color: white;
 		font-family: 'Pacifico', cursive;
 		font-size: 1.4em;
@@ -266,7 +266,15 @@ Notes:   main.css for list-project
 		font-size: 2.8em;
 	}
 
-	form h4 {
+	.reset-button {
+		margin-top: 10px;
+	}
+
+	.reset-button:active {
+		margin-top: 10px;
+	}
+
+	.instructions {
 		font-size: 0.8em;
 		display: none;
 	}
@@ -276,7 +284,7 @@ Notes:   main.css for list-project
 		padding: 0;
 	}
 
-	.list li {
+	.list-items {
 		font-size: 1.2em;
 	}
 
@@ -290,16 +298,8 @@ Notes:   main.css for list-project
 		margin-top: 10.2%;
 	}
 
-	footer h3 {
+	.footer-text {
 		font-size: 1em;
-	}
-
-	.reset-button {
-		margin-top: 10px;
-	}
-
-	.reset-button:active {
-		margin-top: 10px;
 	}
 }
 
@@ -343,8 +343,8 @@ Notes:   main.css for list-project
 	.footer-container,
 	.main-input,
 	.print-button,
-	button,
-	h4 {
+	.instructions,
+	button {
 	  display: none;
 	}
 }
