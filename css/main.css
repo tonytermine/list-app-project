@@ -17,9 +17,9 @@ Notes:   main.css for list-project
 
 	.header-container,
 	.footer-container,
-	.add,
-	.reset,
-	.print {
+	.add-button,
+	.reset-button,
+	.print-button {
 		background: #f16529;
 	}
 
@@ -84,6 +84,16 @@ Notes:   main.css for list-project
 		background: url("../img/paper.png");
 	}
 
+	form li {
+		list-style-type: none;
+		font-family: 'Architects Daughter', Arial, sans-serif;
+		font-size: 1.4em;
+		font-weight: bold;
+		text-align: left;
+		position: relative;
+		vertical-align: middle;
+	}
+
 	.main-input {
 		width: 70%;
 		margin: 0 auto;
@@ -95,33 +105,33 @@ Notes:   main.css for list-project
 		outline-color: #f16529;
 	}
 
-	.add {
+	.add-button {
 		color: white;
 		font-family: 'Comfortaa', Arial, sans-serif;
 		font-weight: bold;
 		border: none;
 	}
 
-	.add:active {
+	.add-button:active {
 		margin-top: 2px;
 	}
 
-	.add:focus {
+	.add-button:focus {
 		outline: none;
 	}
 
-	.reset {
+	.reset-button {
 		color: white;
 		font-family: 'Comfortaa', Arial, sans-serif;
 		font-weight: bold;
 		border: none;
 	}
 
-	.reset:active {
+	.reset-button:active {
 		margin-top: 2px;
 	}
 
-	.reset:focus {
+	.reset-button:focus {
 		outline: none;
 	}
 
@@ -130,7 +140,7 @@ Notes:   main.css for list-project
 		font-weight: lighter;
 	}
 
-	ul {
+	.list {
 		margin: 0 auto;
 		width: 90%;
 	}
@@ -159,17 +169,7 @@ Notes:   main.css for list-project
 		margin-top: 8px;
 	}
 
-	form li {
-		list-style-type: none;
-		font-family: 'Architects Daughter', Arial, sans-serif;
-		font-size: 1.4em;
-		font-weight: bold;
-		text-align: left;
-		position: relative;
-		vertical-align: middle;
-	}
-
-	.print {
+	.print-button {
 		color: white;
 		display: block;
 		font-family: 'Comfortaa', Arial, sans-serif;
@@ -182,11 +182,11 @@ Notes:   main.css for list-project
 		text-decoration: none;
 	}
 
-	.print:active {
+	.print-button:active {
 		margin-top: 5.2%;
 	}
 
-	.print:focus {
+	.print-button:focus {
 		outline: none;
 	}
 
@@ -226,7 +226,7 @@ Notes:   main.css for list-project
 	}
 
 	.header-container,
-	.print,
+	.print-button,
 	form {
 		-webkit-box-shadow: 0 5px 10px #aaa;
 			 -moz-box-shadow: 0 5px 10px #aaa;
@@ -271,22 +271,22 @@ Notes:   main.css for list-project
 		display: none;
 	}
 
-	ul {
+	.list {
 		width: 100%;
 		padding: 0;
 	}
 
-	ul li {
+	.list li {
 		font-size: 1.2em;
 	}
 
-	.print {
+	.print-button {
 		margin-top: 10%;
 		width: 81%;
 
 	}
 
-	.print:active {
+	.print-button:active {
 		margin-top: 10.2%;
 	}
 
@@ -294,11 +294,11 @@ Notes:   main.css for list-project
 		font-size: 1em;
 	}
 
-	.reset {
+	.reset-button {
 		margin-top: 10px;
 	}
 
-	.reset:active {
+	.reset-button:active {
 		margin-top: 10px;
 	}
 }
@@ -342,7 +342,7 @@ Notes:   main.css for list-project
 
 	.footer-container,
 	.main-input,
-	.print,
+	.print-button,
 	button,
 	h4 {
 	  display: none;
