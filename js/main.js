@@ -5,7 +5,6 @@ $(".add-button").click(function(e) {
 	var toAdd = $("input").val();
 	if (toAdd == 0) {
 	alert("Please, enter text to add to your list!");
-	return false;
 	} else {
 	$(".list").append("<li class='list-items'><span class='fa-stack'><i class='checkbox fa fa-square-o fa-stack-1x'></i><i class='check fa fa-check fa-stack-1x'></i></span>"+toAdd+"<i class='delete fa fa-times'></i></li>");
 	}
